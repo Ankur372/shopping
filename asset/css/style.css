@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #F5F5F5;
+    color: #1A1818;
+    font-size: 15px;
+    line-height: 25px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+a:hover{text-decoration: none;}
+.font-bold{font-weight: 700;}
+.text-red{color: #9D1C30 !important;}
+.btn{border-radius: 0;font-size: 13px;line-height:16px;font-weight: 600;letter-spacing: 1.3px;text-transform: uppercase;font-family: 'Montserrat', sans-serif;min-height: 54px;}
+.btn-red{background: #9D1C30;color: #FFFFFF;}
+.btn-red:hover{color: #FFFFFF;}
+.error{display: none;}
+
+
+.section-title{color: #1A1818;font-weight: 700;font-size: 32px;line-height: 42px;}
+.card{background: #fff;border: none;border-radius: 0;height: 100%;}
+.card-title{color: #979792;font-size: 24px;line-height:29px;font-weight: 700;}
+.card-detail p{color: #1A1818;line-height: 25px;}
+.card-inn{padding:20px;height: 100%;}
+.card .card-inn{border: 2px solid transparent;transition: border 0.4s;}
+.card > a:hover, .card-inn.selected{border: 2px solid #9D1C30;}
+
+.bag-card .bag-qtt{font-size: 12px;line-height:15px;letter-spacing: 0.6px;color: #5C5C54;text-transform: uppercase;font-family: 'Montserrat', sans-serif;}
+.card-label {padding: 8px 10px;position: absolute;top: 20px;left: 20px;font-weight: 700;font-size: 11px;line-height:14px;letter-spacing: 0.55px;color: #FFFFFF;text-transform: uppercase;background: #9D1C30 ;font-family: 'Montserrat', sans-serif;}
+.list-nav{font-size: 11px;line-height:14px;letter-spacing: 0.55px;font-family: 'Montserrat', sans-serif;}
+.list-nav a.text-red{opacity: 1;}
+.list-nav a{color: #1A1818;}
+.list-nav li:nth-child(n + 2):after {content: "";display: block;width: 25px;height: 1px;background: #1A1818;opacity: 0.3;position: absolute;left: -12px;top: 50%;margin-top: -1px;}
+.list-nav li:nth-child(n + 2) {position: relative;}
+.list-nav li.done a{opacity: 1;}
+.list-nav li.active a{color: #9D1C30 !important;opacity: 1;}
+.product-selection-prev,.product-selection-next{font-size: 13px;line-height:16px;letter-spacing: 0.65px;font-family: 'Montserrat', sans-serif;color: #1A1818;font-weight: 700;}
+.product-selection-prev:hover,.product-selection-next:hover{color: #1A1818;}
+.list-nav li.active ~ li a{opacity: 0.3;}
+
+.text-selected-bags{font-family: 'Montserrat', sans-serif;font-weight: 700;font-size: 11px;line-height:18px;letter-spacing: 0.55px;}
+.text-selected-bags span{font-size: 14px;line-height:18px;letter-spacing: 0.7px;}
+.row-roast-selection{margin: 0 -55px}
+.roast-qtt-select a[class*="roast-qtt-"]{width: 25px;height: 25px;line-height: 25px;background-color: #f5f5f5;display: inline-block;color: #5C5C54;border-radius: 50%;text-align: center;}
+.card-roast .card-title{font-size: 18px;line-height:22px;color: #1A1818;}
+.card-roast .card-desc{font-weight: 700;font-size: 11px;line-height:14px;letter-spacing: 0.55px;color: #5C5C54;text-transform: uppercase;font-family: 'Montserrat', sans-serif;}
+.card-roast{font-size: 14px;line-height:18px;color:#707070;}
+
+
+
+.grid-type-card .card-title{font-size: 24px;line-height:29px;color:#979792;}
+.grid-type-card .card-desc{font-size: 15px;line-height:25px;}
+.row-grid-type{margin: 0 -55px}
+
+
+.frequency-card .card-title{font-size: 24px;line-height:29px;color:#979792;}
+.text-frequency-info .icon-underline{position: absolute;right: 0;top: 100%;}
+
+
+.row-addon-section{margin: 0 -55px;}
+.card-addon .card-title{font-size: 18px;line-height:22px;color: #1A1818;}
+
+
+.card-summary{padding: 40px;}
+.card-summary .card-head {max-width: 278px;overflow: hidden;}
+.card-summary .card-head img {max-width: none;position: relative;left: 50%;transform: translateX(-50%);}
+.list-prod-items h6{font-size: 14px;line-height:18px;letter-spacing: 1.4px;font-weight: 700;text-transform: uppercase;}
+.list-prod-items p{margin-bottom: 0;}
+.text-subtotal{font-weight: 500;}
+.list-prod-items .list-item + .list-item {border-top: 1px solid #E6E6E5;margin-top: 1rem;padding-top: 1rem;}
+.text-edit{font-size: 11px;line-height:14px;letter-spacing: 1.1px;text-transform: uppercase;font-weight: 600;font-family: 'Montserrat', sans-serif;}
+.text-add-bag{font-weight: 600;font-size: 13px;line-height:16px;letter-spacing: 1.3px;font-family: 'Montserrat', sans-serif;}
+
+.row[class*="row-"],#sectionProductDetailSteps{display: none;}
+.row[class*="row-"].active{display: flex;}
+
+
+@media(min-width:1360px){
+    .container{max-width: 1320px;}
+}
+
