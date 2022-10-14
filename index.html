@@ -5,772 +5,860 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <title>HulkApp</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="asset/css/style.css" rel="stylesheet" type="text/css"/>
 
-    </head>
-    <body>
-        <main>
-            <section id="sectionProduct" class="py-5 section-product">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 mb-5">
-                            <h2 class="section-title text-center">Who is this for?</h2>
+<head>
+    <title>HulkApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="asset/css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+
+<body>
+    <main>
+        <section id="sectionProduct" class="py-5 section-product">
+            <div class="container">
+                <div class="row bhdfh">
+                    <div class="col-12 mb-5">
+                        <h2 class="section-title text-center">Who is this for?</h2>
+                    </div>
+                    <div class="col-4 px-4">
+                        <div class="card product-card">
+                            <a class="card-inn d-block" href="javascript:void(0)" onclick="productSelection(this)"
+                                data-product-id="1">
+                                <div class="card-head">
+                                    <img class="card-pic img-fluid" src="asset/img/prod-myself.png" alt="" />
+                                </div>
+                                <div class="card-detail mt-4 p-1 ">
+                                    <h3 class="card-title">For Myself</h3>
+                                    <p class="card-desc mb-0"><span class="text-red font-bold">1lb bags</span> •
+                                        Delivered right to your door!</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="col-4 px-4">
-                            <div class="card product-card">
-                                <a class="card-inn d-block" href="javascript:void(0)" onclick="productSelection(this)" data-product-id="1">
-                                    <div class="card-head">                                        
-                                        <img class="card-pic img-fluid" src="asset/img/prod-myself.png" alt=""/>
-                                    </div>
-                                    <div class="card-detail mt-4 p-1 ">
-                                        <h3 class="card-title">For Myself</h3>
-                                        <p class="card-desc mb-0"><span class="text-red font-bold">1lb bags</span> • Delivered right to your door!</p>
-                                    </div>
-                                </a>
+                    </div>
+                    <div class="col-4 px-4">
+                        <div class="card product-card">
+                            <a class="card-inn d-block" href="javascript:void(0)" onclick="productSelection(this)"
+                                data-product-id="2">
+                                <div class="card-head">
+                                    <img class="card-pic img-fluid" src="asset/img/prod-office.png" alt="" />
+                                </div>
+                                <div class="card-detail mt-4 p-1 ">
+                                    <h3 class="card-title">For The Office</h3>
+                                    <p class="card-desc mb-0"><span class="text-red font-bold">5lb bags</span> • No more
+                                        coffee runs at work!</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 px-4">
+                        <div class="card product-card">
+                            <a class="card-inn d-block" href="javascript:void(0)" onclick="productSelection(this)"
+                                data-product-id="3">
+                                <div class="card-head">
+                                    <img class="card-pic img-fluid" src="asset/img/prod-gift.png" alt="" />
+                                </div>
+                                <div class="card-detail mt-4 p-1 ">
+                                    <h3 class="card-title">It’s A Gift</h3>
+                                    <p class="card-desc mb-0"><span class="text-red font-bold">1lb bags</span> • Give
+                                        the gift of coffee.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionProductDetailSteps" class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 d-flex">
+                        <a class="px-2 product-selection-prev" href="javascript:void(0)"
+                            onclick="backToProductSelection()"><span class="mr-2">
+                                <img src="asset/img/icon-back.png" alt="" />
+                            </span>BACK</a>
+                        <ul class="d-flex list-inline list-nav font-bold ml-auto ">
+                            <li class="px-4"><a class="px-2" href="javascript:void(0)" data-selection-step="1">BAG
+                                    SELECTION</a></li>
+                            <li class="px-4"><a class="px-2" href="javascript:void(0)" data-selection-step="2">ROAST
+                                    PREFERENCE</a></li>
+                            <li class="px-4"><a class="px-2" href="javascript:void(0)" data-selection-step="3">GRIND
+                                    TYPE</a></li>
+                            <li class="px-4"><a class="px-2" href="javascript:void(0)"
+                                    data-selection-step="4">FREQUENCY</a></li>
+                            <li class="px-4"><a class="px-2" href="javascript:void(0)" data-selection-step="5">ADD
+                                    ONS</a></li>
+                            <li class="px-4"><a class="px-2" href="javascript:void(0)"
+                                    data-selection-step="6">SUMMARY</a></li>
+                        </ul>
+                        <a class="px-2 ml-auto product-selection-next" href="javascript:void(0)"
+                            onclick="nextToProductSelection()">NEXT<span class="ml-2">
+                                <img src="asset/img/icon-next.png" alt="" />
+                            </span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row row-bags-selection mb-5">
+                            <div class="col-12 text-center mb-5">
+                                <h2 class="section-title">How many bags of coffee would you like?</h2>
+                                <p class="error text-danger error-bag-selection">Please select bags of coffee first.</p>
+                            </div>
+                            <div class="col-4 px-4">
+                                <div class="card bag-card">
+                                    <a class="card-inn d-block" href="javascript:void(0)" data-bag-count="4"
+                                        data-actual-price="18" data-discount-price="18" data-shipping-fee="6"
+                                        onclick="makeselection(this)">
+                                        <div class="card-head text-center py-4 my-3">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-bag-1.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4 p-1 ">
+                                            <h3 class="card-title">4 Bags</h3>
+                                            <p class="card-desc mb-2"><span>$18.00</span><span class="ml-2">+ $6
+                                                    Shipping</span></p>
+                                            <p class="card-desc bag-qtt font-bold mb-0">(1LB TOTAL)</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 px-4">
+                                <div class="card bag-card">
+                                    <a class="card-inn d-block" href="javascript:void(0)" data-bag-count="8"
+                                        data-actual-price="36" data-discount-price="34.20" data-shipping-fee="0"
+                                        onclick="makeselection(this)">
+                                        <span class="card-label">5% OFF</span>
+                                        <div class="card-head text-center py-4 my-3">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-bag-2.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4 p-1 ">
+                                            <h3 class="card-title">8 Bags</h3>
+                                            <p class="card-desc mb-2"><span><s>$36.00</s></span><span
+                                                    class="font-bold text-red ml-2">$34.20</span><span
+                                                    class="text-red ml-2">+ Free Shipping</span></p>
+                                            <p class="card-desc bag-qtt font-bold mb-0">(2LB TOTAL)</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4 px-4">
+                                <div class="card bag-card">
+                                    <a class="card-inn d-block" href="javascript:void(0)" data-bag-count="12"
+                                        data-actual-price="54" data-discount-price="48.60" data-shipping-fee="0"
+                                        onclick="makeselection(this)">
+                                        <span class="card-label">10% OFF</span>
+                                        <div class="card-head text-center py-4 my-3">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-bag-3.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4 p-1 ">
+                                            <h3 class="card-title">12 Bags</h3>
+                                            <p class="card-desc mb-2"><span><s>$54.00</s></span><span
+                                                    class="font-bold text-red ml-2">$48.60</span><span
+                                                    class="text-red ml-2">+ Free Shipping</span></p>
+                                            <p class="card-desc bag-qtt font-bold mb-0">(3LB TOTAL)</p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-4 px-4">
-                            <div class="card product-card">
-                                <a class="card-inn d-block" href="javascript:void(0)" onclick="productSelection(this)" data-product-id="2">
-                                    <div class="card-head">
-                                        <img class="card-pic img-fluid" src="asset/img/prod-office.png" alt=""/>
+                        <div class="row row-roast-selection mb-5">
+                            <div class="col-12 mb-2 text-center">
+                                <p class="text-selected-bags mb-1">YOU HAVE SELECTED <span class="text-red"><span
+                                            id="roastCountSelected">0</span>/<span id="roastTotalAllowed"></span></p>
+                                <p class="error text-danger error-roast-selection">Please select <span
+                                        id="roastTotalAllowedQuan"></span> quantity of roast first.</p>
+                            </div>
+                            <div class="col-3 p-3">
+                                <div class="card card-roast">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center position-relative">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-roast-1.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-3">
+                                            <h3 class="card-title">Lavazza Coffee</h3>
+                                            <p class="card-desc mb-3">EXOTIC • RICH • AROMATIC</p>
+                                            <div class="roast-qtt-select">
+                                                <a class="roast-qtt-less" href="javascript:void(0)"
+                                                    onclick="reduceRoastCount(this)">-</a>
+                                                <span class="px-2 roast-count">0</span>
+                                                <a class="roast-qtt-add" href="javascript:void(0)"
+                                                    onclick="increaseRoastCount(this)">+</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="card-detail mt-4 p-1 ">
-                                        <h3 class="card-title">For The Office</h3>
-                                        <p class="card-desc mb-0"><span class="text-red font-bold">5lb bags</span> • No more coffee runs at work!</p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-3">
+                                <div class="card card-roast">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center position-relative">
+                                            <span class="card-label">DARK ROAST</span>
+                                            <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-3">
+                                            <h3 class="card-title">Van Houtte</h3>
+                                            <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
+                                            <div class="roast-qtt-select">
+                                                <a class="roast-qtt-less" href="javascript:void(0)"
+                                                    onclick="reduceRoastCount(this)">-</a>
+                                                <span class="px-2 roast-count">0</span>
+                                                <a class="roast-qtt-add" href="javascript:void(0)"
+                                                    onclick="increaseRoastCount(this)">+</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
+                            </div>
+                            <div class="col-3 p-3">
+                                <div class="card card-roast">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center position-relative">
+                                            <span class="card-label">LIGHT ROAST</span>
+                                            <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-3">
+                                            <h3 class="card-title">Van Houtte 1</h3>
+                                            <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
+                                            <div class="roast-qtt-select">
+                                                <a class="roast-qtt-less" href="javascript:void(0)"
+                                                    onclick="reduceRoastCount(this)">-</a>
+                                                <span class="px-2 roast-count">0</span>
+                                                <a class="roast-qtt-add" href="javascript:void(0)"
+                                                    onclick="increaseRoastCount(this)">+</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 p-3">
+                                <div class="card card-roast">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center position-relative">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-3">
+                                            <h3 class="card-title">Van Houtte 2</h3>
+                                            <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
+                                            <div class="roast-qtt-select">
+                                                <a class="roast-qtt-less" href="javascript:void(0)"
+                                                    onclick="reduceRoastCount(this)">-</a>
+                                                <span class="px-2 roast-count">0</span>
+                                                <a class="roast-qtt-add" href="javascript:void(0)"
+                                                    onclick="increaseRoastCount(this)">+</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 p-3">
+                                <div class="card card-roast">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center position-relative">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-roast-1.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-3">
+                                            <h3 class="card-title">Lavazza Coffee 1</h3>
+                                            <p class="card-desc mb-3">EXOTIC • RICH • AROMATIC</p>
+                                            <div class="roast-qtt-select">
+                                                <a class="roast-qtt-less" href="javascript:void(0)"
+                                                    onclick="reduceRoastCount(this)">-</a>
+                                                <span class="px-2 roast-count">0</span>
+                                                <a class="roast-qtt-add" href="javascript:void(0)"
+                                                    onclick="increaseRoastCount(this)">+</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 p-3">
+                                <div class="card card-roast">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center position-relative">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-3">
+                                            <h3 class="card-title">Van Houtte 3</h3>
+                                            <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
+                                            <div class="roast-qtt-select">
+                                                <a class="roast-qtt-less" href="javascript:void(0)"
+                                                    onclick="reduceRoastCount(this)">-</a>
+                                                <span class="px-2 roast-count">0</span>
+                                                <a class="roast-qtt-add" href="javascript:void(0)"
+                                                    onclick="increaseRoastCount(this)">+</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 p-3">
+                                <div class="card card-roast">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center position-relative">
+                                            <span class="card-label">LIGHT ROAST</span>
+                                            <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-3">
+                                            <h3 class="card-title">Van Houtte 4</h3>
+                                            <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
+                                            <div class="roast-qtt-select">
+                                                <a class="roast-qtt-less" href="javascript:void(0)"
+                                                    onclick="reduceRoastCount(this)">-</a>
+                                                <span class="px-2 roast-count">0</span>
+                                                <a class="roast-qtt-add" href="javascript:void(0)"
+                                                    onclick="increaseRoastCount(this)">+</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 p-3">
+                                <div class="card card-roast">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center position-relative">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-3">
+                                            <h3 class="card-title">Van Houtte 5</h3>
+                                            <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
+                                            <div class="roast-qtt-select">
+                                                <a class="roast-qtt-less" href="javascript:void(0)"
+                                                    onclick="reduceRoastCount(this)">-</a>
+                                                <span class="px-2 roast-count">0</span>
+                                                <a class="roast-qtt-add" href="javascript:void(0)"
+                                                    onclick="increaseRoastCount(this)">+</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-4 px-4">
-                            <div class="card product-card">
-                                <a class="card-inn d-block" href="javascript:void(0)" onclick="productSelection(this)" data-product-id="3">
-                                    <div class="card-head">
-                                        <img class="card-pic img-fluid" src="asset/img/prod-gift.png" alt=""/>
+                        <div class="row row-grid-type mb-5">
+                            <div class="col-12 text-center mb-5">
+                                <h2 class="section-title">Choose your grind type.</h2>
+                                <p class="error text-danger error-grind-selection">Please select grind type.</p>
+                            </div>
+                            <div class="col-2">
+                                <div class="card grid-type-card">
+                                    <a class="card-inn d-flex flex-column" href="javascript:void(0)"
+                                        onclick="makeselection(this)">
+                                        <div
+                                            class="card-head h-100 d-flex align-items-center justify-content-center py-3">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-grind-1.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4 p-1 ">
+                                            <h3 class="card-title">Beans</h3>
+                                            <p class="card-desc mb-0">Whole Beans</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="card grid-type-card">
+                                    <a class="card-inn d-flex flex-column" href="javascript:void(0)"
+                                        onclick="makeselection(this)">
+                                        <div
+                                            class="card-head h-100 d-flex align-items-center justify-content-center py-3">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-grind-2.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4 p-1 ">
+                                            <h3 class="card-title">Press</h3>
+                                            <p class="card-desc mb-0">Coarse</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="card grid-type-card">
+                                    <a class="card-inn d-flex flex-column" href="javascript:void(0)"
+                                        onclick="makeselection(this)">
+                                        <div
+                                            class="card-head h-100 d-flex align-items-center justify-content-center py-3">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-grind-3.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4 p-1 ">
+                                            <h3 class="card-title">Drip</h3>
+                                            <p class="card-desc mb-0">Medium</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="card grid-type-card">
+                                    <a class="card-inn d-flex flex-column" href="javascript:void(0)"
+                                        onclick="makeselection(this)">
+                                        <div
+                                            class="card-head h-100 d-flex align-items-center justify-content-center py-3">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-grind-4.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4 p-1 ">
+                                            <h3 class="card-title">Cone</h3>
+                                            <p class="card-desc mb-0">Medium-Fine</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="card grid-type-card">
+                                    <a class="card-inn d-flex flex-column" href="javascript:void(0)"
+                                        onclick="makeselection(this)">
+                                        <div
+                                            class="card-head h-100 d-flex align-items-center justify-content-center py-3">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-grind-5.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4 p-1 ">
+                                            <h3 class="card-title">Espresso</h3>
+                                            <p class="card-desc mb-0">Fine</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="card grid-type-card flex-column">
+                                    <a class="card-inn d-flex flex-column" href="javascript:void(0)"
+                                        onclick="makeselection(this)">
+                                        <div
+                                            class="card-head h-100 d-flex align-items-center justify-content-center py-3">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-grind-6.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4 p-1">
+                                            <h3 class="card-title">Extra Fine</h3>
+                                            <p class="card-desc mb-0">The Finest</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-frequency-selection mb-5 px-3">
+                            <div class="col-12 text-center mb-5">
+                                <h2 class="section-title ">How often would you like to receive your coffee?</h2>
+                                <p class="error text-danger error-frequency-selection">Please select order frequency.
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <div class="card frequency-card">
+                                    <a class="card-inn d-block p-4" href="javascript:void(0)"
+                                        onclick="makeselection(this)">
+                                        <h3 class="card-title py-2 mb-0 text-center">Once A Month</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card frequency-card">
+                                    <a class="card-inn d-block p-4" href="javascript:void(0)"
+                                        onclick="makeselection(this)">
+                                        <h3 class="card-title py-2 mb-0 text-center">Every Other Month</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card frequency-card">
+                                    <a class="card-inn d-block p-4" href="javascript:void(0)"
+                                        onclick="makeselection(this)">
+                                        <h3 class="card-title py-2 mb-0 text-center">Every 3 Months</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 my-5 text-center ">
+                                <span class="text-frequency-info d-inline-block position-relative"><img class="mr-2"
+                                        src="asset/img/icon-info.png" alt="" />All subscription orders will be roasted
+                                    and shipped on the 1st of every month.<img class="icon-underline"
+                                        src="asset/img/icon-underline.png" alt="" /></span>
+                            </div>
+                        </div>
+                        <div class="row row-addon-section mb-5">
+                            <div class="col-12 text-center mb-5">
+                                <h2 class="section-title">Select Add Ons:</h2>
+                                <p class="error text-danger error-addon-selection">Please select addon.</p>
+                            </div>
+                            <div class="col-3">
+                                <div class="card card-addon">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-addon-1.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4">
+                                            <h3 class="card-title mb-4">Coffee Filter</h3>
+                                            <button class="btn btn-red py-3 btn-block btn-select-addon"
+                                                onclick="makeselection(this)">Select</button>
+                                        </div>
                                     </div>
-                                    <div class="card-detail mt-4 p-1 ">
-                                        <h3 class="card-title">It’s A Gift</h3>
-                                        <p class="card-desc mb-0"><span class="text-red font-bold">1lb bags</span> • Give the gift of coffee.</p>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card card-addon">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-addon-2.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4">
+                                            <h3 class="card-title mb-4">Hand Spreso</h3>
+                                            <button class="btn btn-red py-3 btn-block btn-select-addon"
+                                                onclick="makeselection(this)">Select</button>
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card card-addon">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-addon-3.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4">
+                                            <h3 class="card-title mb-4">Classic Cookies</h3>
+                                            <button class="btn btn-red py-3 btn-block btn-select-addon"
+                                                onclick="makeselection(this)">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card card-addon">
+                                    <div class="card-inn p-3">
+                                        <div class="card-head text-center">
+                                            <img class="card-pic img-fluid" src="asset/img/pic-addon-4.png" alt="" />
+                                        </div>
+                                        <div class="card-detail mt-4">
+                                            <h3 class="card-title mb-4">Coffee Mug</h3>
+                                            <button class="btn btn-red py-3 btn-block btn-select-addon"
+                                                onclick="makeselection(this)">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-summary-section mb-5">
+                            <div class="col-12 text-center mb-4">
+                                <h2 class="section-title">Order Summary</h2>
+                                <p>You’ll be able to change or cancel this subscription at anytime.</p>
+                            </div>
+                            <div class="col-10 mx-auto">
+                                <div class="card card-summary">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <div class="card-head text-center">
+                                                <img class="card-pic img-fluid" id="selectedProductPic"
+                                                    src="asset/img/pic-prod-summary.png" alt="" />
+                                            </div>
+                                            <div class="card-detail mt-3">
+                                                <h3 class="card-title" id="selectedProductTitle">For Myself</h3>
+                                                <p class="card-desc mb-0" id="selectedProductDesc"><span
+                                                        class="text-red font-bold">1lb bags</span> • Delivered right to
+                                                    your door!</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-unstyled list-prod-items mb-0">
+                                                <li class="list-item">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h6>AMOUNT:</h6>
+                                                            <p id="selectedBagsQuan">4 bags</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a class="text-red text-edit" href="javascript:void(0)"
+                                                                onclick="moveToProductSelection(1)">Edit</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h6>ROAST PREFERENCE:</h6>
+                                                            <ul class="list-unstyled" id="selectedRoasts">
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a class="text-red text-edit" href="javascript:void(0)"
+                                                                onclick="moveToProductSelection(2)">Edit</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h6>GRIND TYPE:</h6>
+                                                            <p><span id="selectedGrindTitle">Press</span> • <span
+                                                                    id="selectedGrindDesc">Coarse</span></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a class="text-red text-edit" href="javascript:void(0)"
+                                                                onclick="moveToProductSelection(3)">Edit</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h6>FREQUENCY:</h6>
+                                                            <p id="selectedOrderFrequency">Every Other Month</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a class="text-red text-edit" href="javascript:void(0)"
+                                                                onclick="moveToProductSelection(4)">Edit</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h6>ADD-ONS:</h6>
+                                                            <p id="selectedProductAddon">Coffee Filter</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a class="text-red text-edit" href="javascript:void(0)"
+                                                                onclick="moveToProductSelection(5)">Edit</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex">
+                                                <span>Coffee:</span>
+                                                <div class="ml-auto"><span class="text-red text-subtotal font-bold"
+                                                        id="selectedProductDiscPrice">$34.20</span><small><s
+                                                            id="selectedProductActPrice" class="ml-1">$36.00</s></small>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex py-4 border-bottom">
+                                                <span>Shipping:</span>
+                                                <span class="ml-auto" id="shippingFee">FREE</span>
+                                            </div>
+                                            <div class="py-4">
+                                                <h5 class="d-flex justify-content-between mb-0 font-bold">Subtotal:<span
+                                                        class="ml-auto" id="subTotalAmount">$34.20</span></h5>
+                                                <p class="mb-0 text-right">per shipment</p>
+                                            </div>
+                                            <a class="btn btn-red btn-block py-3 mb-4"
+                                                href="javascript:void(0)">CHECKOUT</a>
+                                            <div class="text-center"><a class="text-red text-add-bag"
+                                                    href="javascript:void(0)">+ ADD TO BAG & CONTINUE SHOPPING</a></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="sectionProductDetailSteps" class="py-5">
-                <div class="container">
-                    <div class="row mb-5">
-                        <div class="col-12 d-flex">
-                            <a class="px-2 product-selection-prev" href="javascript:void(0)" onclick="backToProductSelection()"><span class="mr-2">
-                                    <img src="asset/img/icon-back.png" alt=""/>                                  
-                                </span>BACK</a>
-                            <ul class="d-flex list-inline list-nav font-bold ml-auto ">
-                                <li class="px-4"><a class="px-2" href="javascript:void(0)" data-selection-step="1">BAG SELECTION</a></li>
-                                <li class="px-4"><a class="px-2" href="javascript:void(0)" data-selection-step="2">ROAST PREFERENCE</a></li>
-                                <li class="px-4"><a class="px-2" href="javascript:void(0)" data-selection-step="3">GRIND TYPE</a></li>
-                                <li class="px-4"><a class="px-2" href="javascript:void(0)" data-selection-step="4">FREQUENCY</a></li>
-                                <li class="px-4"><a class="px-2" href="javascript:void(0)" data-selection-step="5">ADD ONS</a></li>
-                                <li class="px-4"><a class="px-2" href="javascript:void(0)" data-selection-step="6">SUMMARY</a></li>
-                            </ul>
-                            <a class="px-2 ml-auto product-selection-next" href="javascript:void(0)" onclick="nextToProductSelection()">NEXT<span class="ml-2">
-                                    <img src="asset/img/icon-next.png" alt=""/>
-                                </span></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row row-bags-selection mb-5">
-                                <div class="col-12 text-center mb-5">
-                                    <h2 class="section-title">How many bags of coffee would you like?</h2>
-                                    <p class="error text-danger error-bag-selection">Please select bags of coffee first.</p>
-                                </div>
-                                <div class="col-4 px-4">
-                                    <div class="card bag-card">
-                                        <a class="card-inn d-block" href="javascript:void(0)" data-bag-count="4" data-actual-price="18" data-discount-price="18" data-shipping-fee="6" onclick="makeselection(this)">
-                                            <div class="card-head text-center py-4 my-3">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-bag-1.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4 p-1 ">
-                                                <h3 class="card-title">4 Bags</h3>
-                                                <p class="card-desc mb-2"><span>$18.00</span><span class="ml-2">+ $6 Shipping</span></p>
-                                                <p class="card-desc bag-qtt font-bold mb-0">(1LB TOTAL)</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-4 px-4">
-                                    <div class="card bag-card">
-                                        <a class="card-inn d-block" href="javascript:void(0)" data-bag-count="8" data-actual-price="36" data-discount-price="34.20" data-shipping-fee="0" onclick="makeselection(this)">
-                                            <span class="card-label">5% OFF</span>
-                                            <div class="card-head text-center py-4 my-3">
-                                                <img class="card-pic img-fluid" src="asset/img/pic-bag-2.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4 p-1 ">
-                                                <h3 class="card-title">8 Bags</h3>
-                                                <p class="card-desc mb-2"><span><s>$36.00</s></span><span class="font-bold text-red ml-2">$34.20</span><span class="text-red ml-2">+ Free Shipping</span></p>
-                                                <p class="card-desc bag-qtt font-bold mb-0">(2LB TOTAL)</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-4 px-4">
-                                    <div class="card bag-card">
-                                        <a class="card-inn d-block" href="javascript:void(0)" data-bag-count="12" data-actual-price="54" data-discount-price="48.60" data-shipping-fee="0" onclick="makeselection(this)">
-                                            <span class="card-label">10% OFF</span>
-                                            <div class="card-head text-center py-4 my-3">
-                                                <img class="card-pic img-fluid" src="asset/img/pic-bag-3.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4 p-1 ">
-                                                <h3 class="card-title">12 Bags</h3>
-                                                <p class="card-desc mb-2"><span><s>$54.00</s></span><span class="font-bold text-red ml-2">$48.60</span><span class="text-red ml-2">+ Free Shipping</span></p>
-                                                <p class="card-desc bag-qtt font-bold mb-0">(3LB TOTAL)</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row row-roast-selection mb-5">
-                                <div class="col-12 mb-2 text-center">
-                                    <p class="text-selected-bags mb-1">YOU HAVE SELECTED <span class="text-red"><span id="roastCountSelected">0</span>/<span id="roastTotalAllowed"></span></p>
-                                    <p class="error text-danger error-roast-selection">Please select <span id="roastTotalAllowedQuan"></span> quantity of roast first.</p>
-                                </div>
-                                <div class="col-3 p-3">
-                                    <div class="card card-roast">
-                                        <div class="card-inn p-3">                                    
-                                            <div class="card-head text-center position-relative">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-roast-1.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-3">
-                                                <h3 class="card-title">Lavazza Coffee</h3>
-                                                <p class="card-desc mb-3">EXOTIC • RICH • AROMATIC</p>
-                                                <div class="roast-qtt-select">
-                                                    <a class="roast-qtt-less" href="javascript:void(0)" onclick="reduceRoastCount(this)">-</a>
-                                                    <span class="px-2 roast-count">0</span>
-                                                    <a class="roast-qtt-add" href="javascript:void(0)" onclick="increaseRoastCount(this)">+</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 p-3">
-                                    <div class="card card-roast">
-                                        <div class="card-inn p-3">
-                                            <div class="card-head text-center position-relative">                                        
-                                                <span class="card-label">DARK ROAST</span>
-                                                <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-3">
-                                                <h3 class="card-title">Van Houtte</h3>
-                                                <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
-                                                <div class="roast-qtt-select">
-                                                    <a class="roast-qtt-less" href="javascript:void(0)" onclick="reduceRoastCount(this)">-</a>
-                                                    <span class="px-2 roast-count">0</span>
-                                                    <a class="roast-qtt-add" href="javascript:void(0)" onclick="increaseRoastCount(this)">+</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 p-3">
-                                    <div class="card card-roast">
-                                        <div class="card-inn p-3">
-                                            <div class="card-head text-center position-relative">                                        
-                                                <span class="card-label">LIGHT ROAST</span>
-                                                <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-3">
-                                                <h3 class="card-title">Van Houtte 1</h3>
-                                                <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
-                                                <div class="roast-qtt-select">
-                                                    <a class="roast-qtt-less" href="javascript:void(0)" onclick="reduceRoastCount(this)">-</a>
-                                                    <span class="px-2 roast-count">0</span>
-                                                    <a class="roast-qtt-add" href="javascript:void(0)" onclick="increaseRoastCount(this)">+</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 p-3">
-                                    <div class="card card-roast">
-                                        <div class="card-inn p-3">
-                                            <div class="card-head text-center position-relative">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-3">
-                                                <h3 class="card-title">Van Houtte 2</h3>
-                                                <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
-                                                <div class="roast-qtt-select">
-                                                    <a class="roast-qtt-less" href="javascript:void(0)" onclick="reduceRoastCount(this)">-</a>
-                                                    <span class="px-2 roast-count">0</span>
-                                                    <a class="roast-qtt-add" href="javascript:void(0)" onclick="increaseRoastCount(this)">+</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 p-3">
-                                    <div class="card card-roast">
-                                        <div class="card-inn p-3">                                    
-                                            <div class="card-head text-center position-relative">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-roast-1.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-3">
-                                                <h3 class="card-title">Lavazza Coffee 1</h3>
-                                                <p class="card-desc mb-3">EXOTIC • RICH • AROMATIC</p>
-                                                <div class="roast-qtt-select">
-                                                    <a class="roast-qtt-less" href="javascript:void(0)" onclick="reduceRoastCount(this)">-</a>
-                                                    <span class="px-2 roast-count">0</span>
-                                                    <a class="roast-qtt-add" href="javascript:void(0)" onclick="increaseRoastCount(this)">+</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 p-3">
-                                    <div class="card card-roast">
-                                        <div class="card-inn p-3">
-                                            <div class="card-head text-center position-relative">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-3">
-                                                <h3 class="card-title">Van Houtte 3</h3>
-                                                <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
-                                                <div class="roast-qtt-select">
-                                                    <a class="roast-qtt-less" href="javascript:void(0)" onclick="reduceRoastCount(this)">-</a>
-                                                    <span class="px-2 roast-count">0</span>
-                                                    <a class="roast-qtt-add" href="javascript:void(0)" onclick="increaseRoastCount(this)">+</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 p-3">
-                                    <div class="card card-roast">
-                                        <div class="card-inn p-3">
-                                            <div class="card-head text-center position-relative">                                        
-                                                <span class="card-label">LIGHT ROAST</span>
-                                                <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-3">
-                                                <h3 class="card-title">Van Houtte 4</h3>
-                                                <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
-                                                <div class="roast-qtt-select">
-                                                    <a class="roast-qtt-less" href="javascript:void(0)" onclick="reduceRoastCount(this)">-</a>
-                                                    <span class="px-2 roast-count">0</span>
-                                                    <a class="roast-qtt-add" href="javascript:void(0)" onclick="increaseRoastCount(this)">+</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 p-3">
-                                    <div class="card card-roast">
-                                        <div class="card-inn p-3">
-                                            <div class="card-head text-center position-relative">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-roast-2.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-3">
-                                                <h3 class="card-title">Van Houtte 5</h3>
-                                                <p class="card-desc mb-3">CLASSIC • NUTTY • ROUND BODY</p>
-                                                <div class="roast-qtt-select">
-                                                    <a class="roast-qtt-less" href="javascript:void(0)" onclick="reduceRoastCount(this)">-</a>
-                                                    <span class="px-2 roast-count">0</span>
-                                                    <a class="roast-qtt-add" href="javascript:void(0)" onclick="increaseRoastCount(this)">+</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row row-grid-type mb-5">
-                                <div class="col-12 text-center mb-5">
-                                    <h2 class="section-title">Choose your grind type.</h2>
-                                    <p class="error text-danger error-grind-selection">Please select grind type.</p>
-                                </div>
-                                <div class="col-2">
-                                    <div class="card grid-type-card">
-                                        <a class="card-inn d-flex flex-column" href="javascript:void(0)" onclick="makeselection(this)">
-                                            <div class="card-head h-100 d-flex align-items-center justify-content-center py-3">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-grind-1.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4 p-1 ">
-                                                <h3 class="card-title">Beans</h3>
-                                                <p class="card-desc mb-0">Whole Beans</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="card grid-type-card">
-                                        <a class="card-inn d-flex flex-column" href="javascript:void(0)" onclick="makeselection(this)">
-                                            <div class="card-head h-100 d-flex align-items-center justify-content-center py-3">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-grind-2.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4 p-1 ">
-                                                <h3 class="card-title">Press</h3>
-                                                <p class="card-desc mb-0">Coarse</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="card grid-type-card">
-                                        <a class="card-inn d-flex flex-column" href="javascript:void(0)" onclick="makeselection(this)">
-                                            <div class="card-head h-100 d-flex align-items-center justify-content-center py-3">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-grind-3.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4 p-1 ">
-                                                <h3 class="card-title">Drip</h3>
-                                                <p class="card-desc mb-0">Medium</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="card grid-type-card">
-                                        <a class="card-inn d-flex flex-column" href="javascript:void(0)" onclick="makeselection(this)">
-                                            <div class="card-head h-100 d-flex align-items-center justify-content-center py-3">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-grind-4.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4 p-1 ">
-                                                <h3 class="card-title">Cone</h3>
-                                                <p class="card-desc mb-0">Medium-Fine</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="card grid-type-card">
-                                        <a class="card-inn d-flex flex-column" href="javascript:void(0)" onclick="makeselection(this)">
-                                            <div class="card-head h-100 d-flex align-items-center justify-content-center py-3">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-grind-5.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4 p-1 ">
-                                                <h3 class="card-title">Espresso</h3>
-                                                <p class="card-desc mb-0">Fine</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="card grid-type-card flex-column">
-                                        <a class="card-inn d-flex flex-column" href="javascript:void(0)" onclick="makeselection(this)">
-                                            <div class="card-head h-100 d-flex align-items-center justify-content-center py-3">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-grind-6.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4 p-1">
-                                                <h3 class="card-title">Extra Fine</h3>
-                                                <p class="card-desc mb-0">The Finest</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row row-frequency-selection mb-5 px-3">
-                                <div class="col-12 text-center mb-5">
-                                    <h2 class="section-title ">How often would you like to receive your coffee?</h2>
-                                    <p class="error text-danger error-frequency-selection">Please select order frequency.</p>
-                                </div>
-                                <div class="col-4">
-                                    <div class="card frequency-card">
-                                        <a class="card-inn d-block p-4" href="javascript:void(0)" onclick="makeselection(this)">                                   
-                                            <h3 class="card-title py-2 mb-0 text-center">Once A Month</h3>                                        
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="card frequency-card">
-                                        <a class="card-inn d-block p-4" href="javascript:void(0)" onclick="makeselection(this)">                                   
-                                            <h3 class="card-title py-2 mb-0 text-center">Every Other Month</h3>                                        
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="card frequency-card">
-                                        <a class="card-inn d-block p-4" href="javascript:void(0)" onclick="makeselection(this)">                                   
-                                            <h3 class="card-title py-2 mb-0 text-center">Every 3 Months</h3>                                        
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 my-5 text-center ">                           
-                                    <span class="text-frequency-info d-inline-block position-relative"><img class="mr-2" src="asset/img/icon-info.png" alt=""/>All subscription orders will be roasted and shipped on the 1st of every month.<img class="icon-underline" src="asset/img/icon-underline.png" alt=""/></span>
-                                </div>
-                            </div>
-                            <div class="row row-addon-section mb-5">
-                                <div class="col-12 text-center mb-5">
-                                    <h2 class="section-title">Select Add Ons:</h2>
-                                    <p class="error text-danger error-addon-selection">Please select addon.</p>
-                                </div>
-                                <div class="col-3">
-                                    <div class="card card-addon">
-                                        <div class="card-inn p-3">                                    
-                                            <div class="card-head text-center">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-addon-1.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4">
-                                                <h3 class="card-title mb-4">Coffee Filter</h3>
-                                                <button class="btn btn-red py-3 btn-block btn-select-addon" onclick="makeselection(this)">Select</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="card card-addon">
-                                        <div class="card-inn p-3">                                    
-                                            <div class="card-head text-center">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-addon-2.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4">
-                                                <h3 class="card-title mb-4">Hand Spreso</h3>
-                                                <button class="btn btn-red py-3 btn-block btn-select-addon" onclick="makeselection(this)">Select</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="card card-addon">
-                                        <div class="card-inn p-3">                                    
-                                            <div class="card-head text-center">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-addon-3.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4">
-                                                <h3 class="card-title mb-4">Classic Cookies</h3>
-                                                <button class="btn btn-red py-3 btn-block btn-select-addon" onclick="makeselection(this)">Select</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="card card-addon">
-                                        <div class="card-inn p-3">                                    
-                                            <div class="card-head text-center">                                        
-                                                <img class="card-pic img-fluid" src="asset/img/pic-addon-4.png" alt=""/>
-                                            </div>
-                                            <div class="card-detail mt-4">
-                                                <h3 class="card-title mb-4">Coffee Mug</h3>
-                                                <button class="btn btn-red py-3 btn-block btn-select-addon" onclick="makeselection(this)">Select</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row row-summary-section mb-5">
-                                <div class="col-12 text-center mb-4">
-                                    <h2 class="section-title">Order Summary</h2>
-                                    <p>You’ll be able to change or cancel this subscription at anytime.</p>
-                                </div>
-                                <div class="col-10 mx-auto">
-                                    <div class="card card-summary">
-                                        <div class="row">                                    
-                                            <div class="col-auto">                                                                        
-                                                <div class="card-head text-center">                                        
-                                                    <img class="card-pic img-fluid" id="selectedProductPic" src="asset/img/pic-prod-summary.png" alt=""/>
-                                                </div>
-                                                <div class="card-detail mt-3">
-                                                    <h3 class="card-title" id="selectedProductTitle">For Myself</h3>
-                                                    <p class="card-desc mb-0" id="selectedProductDesc"><span class="text-red font-bold">1lb bags</span> • Delivered right to your door!</p>
-                                                </div>                                       
-                                            </div>
-                                            <div class="col-4">
-                                                <ul class="list-unstyled list-prod-items mb-0">
-                                                    <li class="list-item">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h6>AMOUNT:</h6>
-                                                                <p id="selectedBagsQuan">4 bags</p>
-                                                            </div>
-                                                            <div class="col-auto">
-                                                                <a class="text-red text-edit" href="javascript:void(0)" onclick="moveToProductSelection(1)">Edit</a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h6>ROAST PREFERENCE:</h6>
-                                                                <ul class="list-unstyled" id="selectedRoasts">
-                                                                </ul>
-                                                            </div>
-                                                            <div class="col-auto">
-                                                                <a class="text-red text-edit" href="javascript:void(0)" onclick="moveToProductSelection(2)">Edit</a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h6>GRIND TYPE:</h6>
-                                                                <p><span id="selectedGrindTitle">Press</span> • <span id="selectedGrindDesc">Coarse</span></p>
-                                                            </div>
-                                                            <div class="col-auto">
-                                                                <a class="text-red text-edit" href="javascript:void(0)" onclick="moveToProductSelection(3)">Edit</a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h6>FREQUENCY:</h6>
-                                                                <p id="selectedOrderFrequency">Every Other Month</p>
-                                                            </div>
-                                                            <div class="col-auto">
-                                                                <a class="text-red text-edit" href="javascript:void(0)" onclick="moveToProductSelection(4)">Edit</a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="list-item">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h6>ADD-ONS:</h6>
-                                                                <p id="selectedProductAddon">Coffee Filter</p>
-                                                            </div>
-                                                            <div class="col-auto">
-                                                                <a class="text-red text-edit" href="javascript:void(0)" onclick="moveToProductSelection(5)">Edit</a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col">
-                                                <div class="d-flex">
-                                                    <span>Coffee:</span>
-                                                    <div class="ml-auto"><span class="text-red text-subtotal font-bold" id="selectedProductDiscPrice">$34.20</span><small><s id="selectedProductActPrice" class="ml-1">$36.00</s></small></div>
-                                                </div>
-                                                <div class="d-flex py-4 border-bottom">
-                                                    <span>Shipping:</span>
-                                                    <span class="ml-auto" id="shippingFee">FREE</span>
-                                                </div>
-                                                <div class="py-4">
-                                                    <h5 class="d-flex justify-content-between mb-0 font-bold">Subtotal:<span class="ml-auto" id="subTotalAmount">$34.20</span></h5>
-                                                    <p class="mb-0 text-right">per shipment</p>
-                                                </div>
-                                                <a class="btn btn-red btn-block py-3 mb-4" href="javascript:void(0)">CHECKOUT</a>
-                                                <div class="text-center"><a class="text-red text-add-bag" href="javascript:void(0)">+ ADD TO BAG & CONTINUE SHOPPING</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <script>
-            let cartSelection = {
-                productSelected: {
-                    id: 0,
-                    name: '',
-                    desc: '',
-                    imgUrl: ''
-                },
-                productBagDetail: {
-                    bag: '',
-                    bagCount: 0,
-                    priceActual: 0,
-                    priceDiscount: 0,
-                    shippingFee: 0
-                },
-                roastSelect: [],
-                gridType: {
-                    name: '',
-                    desc: ''
-                },
-                orderFrequency: '',
-                addon: '',
-            }
-            let currentStep = 0;
-            function hideAllProdDetailSteps() {
-                Array.from(document.querySelectorAll('.row[class*="row-"]')).forEach(function (el) {
-                    el.classList.remove('active');
+            </div>
+        </section>
+    </main>
+    <script>
+        let cartSelection = {
+            productSelected: {
+                id: 0,
+                name: '',
+                desc: '',
+                imgUrl: ''
+            },
+            productBagDetail: {
+                bag: '',
+                bagCount: 0,
+                priceActual: 0,
+                priceDiscount: 0,
+                shippingFee: 0
+            },
+            roastSelect: [],
+            gridType: {
+                name: '',
+                desc: ''
+            },
+            orderFrequency: '',
+            addon: '',
+        }
+        let currentStep = 0;
+        function hideAllProdDetailSteps() {
+            Array.from(document.querySelectorAll('.row[class*="row-"]')).forEach(function (el) {
+                el.classList.remove('active');
+            });
+            Array.from(document.querySelectorAll('.error')).forEach(function (el) {
+                el.style.display = 'none';
+            });
+        }
+        function productSelection(_this) {
+            cartSelection.productSelected.id = _this.getAttribute('data-product-id');
+            cartSelection.productSelected.name = _this.querySelector('.card-title').innerHTML;
+            cartSelection.productSelected.desc = _this.querySelector('.card-desc').innerHTML;
+            cartSelection.productSelected.imgUrl = _this.querySelector('.card-pic').getAttribute('src');
+            document.getElementById("sectionProduct").style.display = 'none';
+            document.getElementById("sectionProductDetailSteps").style.display = 'block';
+            moveToProductSelection(++currentStep);
+        }
+        function makeselection(_this) {
+            Array.from(document.querySelectorAll('.row[class*="row-"].active .card-inn')).forEach(function (el) {
+                el.classList.remove('selected');
+            });
+            if (_this.classList.contains('card-inn')) {
+                _this.classList.add("selected");
+            } else if (_this.classList.contains('btn-select-addon')) {
+                Array.from(document.querySelectorAll('.row[class*="row-"].active .btn-select-addon')).forEach(function (el) {
+                    el.innerHTML = 'Select';
                 });
-                Array.from(document.querySelectorAll('.error')).forEach(function (el) {
-                    el.style.display = 'none';
-                });
+                _this.closest('.card-inn').classList.add("selected");
+                _this.innerHTML = 'Selected';
             }
-            function productSelection(_this) {
-                cartSelection.productSelected.id = _this.getAttribute('data-product-id');
-                cartSelection.productSelected.name = _this.querySelector('.card-title').innerHTML;
-                cartSelection.productSelected.desc = _this.querySelector('.card-desc').innerHTML;
-                cartSelection.productSelected.imgUrl = _this.querySelector('.card-pic').getAttribute('src');
-                document.getElementById("sectionProduct").style.display = 'none';
-                document.getElementById("sectionProductDetailSteps").style.display = 'block';
-                moveToProductSelection(++currentStep);
-            }
-            function makeselection(_this) {
-                Array.from(document.querySelectorAll('.row[class*="row-"].active .card-inn')).forEach(function (el) {
-                    el.classList.remove('selected');
-                });
-                if (_this.classList.contains('card-inn')) {
-                    _this.classList.add("selected");
-                } else if (_this.classList.contains('btn-select-addon')) {
-                    Array.from(document.querySelectorAll('.row[class*="row-"].active .btn-select-addon')).forEach(function (el) {
-                        el.innerHTML = 'Select';
-                    });
-                    _this.closest('.card-inn').classList.add("selected");
-                    _this.innerHTML = 'Selected';
-                }
-            }
-            function initializeBags() {
-                cartSelection.productBagDetail.bag = '';
-                cartSelection.productBagDetail.bagCount = 0;
-                cartSelection.roastSelect=[];
-                document.getElementById("roastCountSelected").innerHTML = 0;
-                document.getElementById("roastTotalAllowed").innerHTML = 0;
-                document.getElementById("roastTotalAllowedQuan").innerHTML = 0;
-                Array.from(document.querySelectorAll('.roast-count')).forEach(function (el) {
-                    el.innerHTML = 0;
-                });
-            }
-            function backToProductSelection() {
-                if (currentStep === 1) {
-                    moveToProductSelection(--currentStep);
-                } else if (currentStep === 2) {
-                    initializeBags();
-                    moveToProductSelection(--currentStep);
-                } else if (currentStep === 3) {
-                    moveToProductSelection(--currentStep);
-                } else if (currentStep === 4) {
-                    moveToProductSelection(--currentStep);
-                } else if (currentStep === 5) {
-                    moveToProductSelection(--currentStep);
-                } else if (currentStep === 6) {
-                    document.querySelector(".product-selection-next").style.visibility = 'visible';
-                    moveToProductSelection(--currentStep);
-                }
-                highlightStep(currentStep);
-            }
-            function nextToProductSelection() {
-                let nodeList = document.querySelectorAll('.row[class*="row-"].active .card-inn.selected');
-                if (currentStep === 1) {
-                    if (nodeList.length) {
-                        cartSelection.productBagDetail.bag = document.querySelector('.row[class*="row-"].active .card-inn.selected .card-title').innerHTML;
-                        cartSelection.productBagDetail.bagCount = document.querySelector('.row[class*="row-"].active .card-inn.selected').getAttribute('data-bag-count');
-                        cartSelection.productBagDetail.priceActual = document.querySelector('.row[class*="row-"].active .card-inn.selected').getAttribute('data-actual-price');
-                        cartSelection.productBagDetail.priceDiscount = document.querySelector('.row[class*="row-"].active .card-inn.selected').getAttribute('data-discount-price');
-                        cartSelection.productBagDetail.shippingFee = parseFloat(document.querySelector('.row[class*="row-"].active .card-inn.selected').getAttribute('data-shipping-fee'));
-                        document.getElementById("roastTotalAllowed").innerHTML = cartSelection.productBagDetail.bagCount;
-                        document.getElementById("roastTotalAllowedQuan").innerHTML = cartSelection.productBagDetail.bagCount;
-                        document.querySelector('.error-bag-selection').style.display = 'none';
-                        moveToProductSelection(++currentStep);
-                    } else {
-                        document.querySelector('.error-bag-selection').style.display = 'block';
-                    }
-                } else if (currentStep === 2) {
-                    if (document.getElementById("roastCountSelected").innerHTML === document.getElementById("roastTotalAllowed").innerHTML) {
-
-                        moveToProductSelection(++currentStep);
-                    } else {
-                        document.querySelector('.error-roast-selection').style.display = 'block';
-                    }
-                } else if (currentStep === 3) {
-                    if (nodeList.length) {
-                        cartSelection.gridType.name = document.querySelector('.row[class*="row-"].active .card-inn.selected .card-title').innerHTML;
-                        cartSelection.gridType.desc = document.querySelector('.row[class*="row-"].active .card-inn.selected .card-desc').innerHTML;
-                        moveToProductSelection(++currentStep);
-                    } else {
-                        document.querySelector('.error-grind-selection').style.display = 'block';
-                    }
-                } else if (currentStep === 4) {
-                    if (nodeList.length) {
-                        cartSelection.orderFrequency = document.querySelector('.row[class*="row-"].active .card-inn.selected .card-title').innerHTML;
-                        moveToProductSelection(++currentStep);
-                    } else {
-                        document.querySelector('.error-frequency-selection').style.display = 'block';
-                    }
-                } else if (currentStep === 5) {
-                    if (nodeList.length) {
-                        cartSelection.addon = document.querySelector('.row[class*="row-"].active .card-inn.selected .card-title').innerHTML;
-                        moveToProductSelection(++currentStep);
-                    } else {
-                        document.querySelector('.error-addon-selection').style.display = 'block';
-                    }
-                }
-                console.log(cartSelection)
-            }
-            function reduceRoastCount(_this) {
-                if (_this.nextElementSibling.innerHTML > 0) {
-                    --_this.nextElementSibling.innerHTML;
-                    document.getElementById("roastCountSelected").innerHTML = --document.getElementById("roastCountSelected").innerHTML;
-                    if (_this.nextElementSibling.innerHTML < 1) {
-                        let idx = cartSelection.roastSelect.indexOf(_this.closest('.card-roast').querySelector('.card-title').innerHTML);
-                        cartSelection.roastSelect.splice(idx, 1);
-                    }
-                }
-            }
-            function increaseRoastCount(_this) {
-                if (parseInt(document.getElementById("roastCountSelected").innerHTML) < parseInt(document.getElementById("roastTotalAllowed").innerHTML)) {
-                    ++_this.previousElementSibling.innerHTML;
-                    document.getElementById("roastCountSelected").innerHTML = ++document.getElementById("roastCountSelected").innerHTML;
-                    if (cartSelection.roastSelect.indexOf(_this.closest('.card-roast').querySelector('.card-title').innerHTML) < 0) {
-                        cartSelection.roastSelect.push(_this.closest('.card-roast').querySelector('.card-title').innerHTML);
-                    }
-                } else {
-                    document.querySelector('.error-roast-selection').style.display = 'none';
-                }
-            }
-            function highlightStep(step) {
-                Array.from(document.querySelectorAll('.list-nav li')).forEach(function (el) {
-                    el.classList.remove('active');
-                });
-                document.querySelector('.list-nav li:nth-child(' + parseInt(step) + ')').classList.add("active");
-            }
-            function fillSummaryDetail() {
-                document.getElementById("selectedProductTitle").innerHTML = cartSelection.productSelected.name;
-                document.getElementById("selectedProductDesc").innerHTML = cartSelection.productSelected.desc;
-                document.getElementById("selectedProductPic").setAttribute('src', cartSelection.productSelected.imgUrl);
-                document.getElementById("selectedBagsQuan").innerHTML = cartSelection.productBagDetail.bag;
-                document.getElementById("selectedRoasts").innerHTML = '';
-                cartSelection.roastSelect.forEach(function (item) {
-                    document.getElementById("selectedRoasts").innerHTML = document.getElementById("selectedRoasts").innerHTML + '<li>' + item + '</li>';
-                });
-                document.getElementById("selectedGrindTitle").innerHTML = cartSelection.gridType.name;
-                document.getElementById("selectedGrindDesc").innerHTML = cartSelection.gridType.desc;
-                document.getElementById("selectedOrderFrequency").innerHTML = cartSelection.orderFrequency;
-                document.getElementById("selectedProductAddon").innerHTML = cartSelection.addon;
-                if (cartSelection.productBagDetail.priceDiscount === cartSelection.productBagDetail.priceActual) {
-                    document.getElementById("selectedProductActPrice").innerHTML = '';
-                } else {
-                    document.getElementById("selectedProductActPrice").innerHTML = '$' + cartSelection.productBagDetail.priceActual
-                }
-                document.getElementById("selectedProductDiscPrice").innerHTML = '$' + cartSelection.productBagDetail.priceDiscount;
-                document.getElementById("shippingFee").innerHTML = '$' + cartSelection.productBagDetail.shippingFee;
-                if (cartSelection.productBagDetail.shippingFee === 0) {
-                    document.getElementById("shippingFee").innerHTML = 'FREE';
-                }
-                document.getElementById("subTotalAmount").innerHTML = '$' + (parseFloat(cartSelection.productBagDetail.priceDiscount) + parseFloat(cartSelection.productBagDetail.shippingFee));
-            }
-            function moveToProductSelection(step) {
-                currentStep = step;
-                hideAllProdDetailSteps();
+        }
+        function initializeBags() {
+            cartSelection.productBagDetail.bag = '';
+            cartSelection.productBagDetail.bagCount = 0;
+            cartSelection.roastSelect = [];
+            document.getElementById("roastCountSelected").innerHTML = 0;
+            document.getElementById("roastTotalAllowed").innerHTML = 0;
+            document.getElementById("roastTotalAllowedQuan").innerHTML = 0;
+            Array.from(document.querySelectorAll('.roast-count')).forEach(function (el) {
+                el.innerHTML = 0;
+            });
+        }
+        function backToProductSelection() {
+            if (currentStep === 1) {
+                moveToProductSelection(--currentStep);
+            } else if (currentStep === 2) {
+                initializeBags();
+                moveToProductSelection(--currentStep);
+            } else if (currentStep === 3) {
+                moveToProductSelection(--currentStep);
+            } else if (currentStep === 4) {
+                moveToProductSelection(--currentStep);
+            } else if (currentStep === 5) {
+                moveToProductSelection(--currentStep);
+            } else if (currentStep === 6) {
                 document.querySelector(".product-selection-next").style.visibility = 'visible';
-                if (step === 0) {
-                    document.getElementById("sectionProduct").style.display = 'block';
-                    document.getElementById("sectionProductDetailSteps").style.display = 'none';
-                } else if (step === 1) {
-                    initializeBags();
-                    document.querySelector(".row-bags-selection").classList.add("active");
-                } else if (step === 2) {
-                    document.querySelector(".row-roast-selection").classList.add("active");
-                } else if (step === 3) {
-                    document.querySelector(".row-grid-type").classList.add("active");
-                } else if (step === 4) {
-                    document.querySelector(".row-frequency-selection").classList.add("active");
-                } else if (step === 5) {
-                    document.querySelector(".row-addon-section").classList.add("active");
-                } else if (step === 6) {
-                    document.querySelector(".row-summary-section").classList.add("active");
-                    document.querySelector(".product-selection-next").style.visibility = 'hidden';
-                    fillSummaryDetail();
-                }
-                highlightStep(step);
+                moveToProductSelection(--currentStep);
             }
-        </script>
-    </body>
+            highlightStep(currentStep);
+        }
+        function nextToProductSelection() {
+            let nodeList = document.querySelectorAll('.row[class*="row-"].active .card-inn.selected');
+            if (currentStep === 1) {
+                if (nodeList.length) {
+                    cartSelection.productBagDetail.bag = document.querySelector('.row[class*="row-"].active .card-inn.selected .card-title').innerHTML;
+                    cartSelection.productBagDetail.bagCount = document.querySelector('.row[class*="row-"].active .card-inn.selected').getAttribute('data-bag-count');
+                    cartSelection.productBagDetail.priceActual = document.querySelector('.row[class*="row-"].active .card-inn.selected').getAttribute('data-actual-price');
+                    cartSelection.productBagDetail.priceDiscount = document.querySelector('.row[class*="row-"].active .card-inn.selected').getAttribute('data-discount-price');
+                    cartSelection.productBagDetail.shippingFee = parseFloat(document.querySelector('.row[class*="row-"].active .card-inn.selected').getAttribute('data-shipping-fee'));
+                    document.getElementById("roastTotalAllowed").innerHTML = cartSelection.productBagDetail.bagCount;
+                    document.getElementById("roastTotalAllowedQuan").innerHTML = cartSelection.productBagDetail.bagCount;
+                    document.querySelector('.error-bag-selection').style.display = 'none';
+                    moveToProductSelection(++currentStep);
+                } else {
+                    document.querySelector('.error-bag-selection').style.display = 'block';
+                }
+            } else if (currentStep === 2) {
+                if (document.getElementById("roastCountSelected").innerHTML === document.getElementById("roastTotalAllowed").innerHTML) {
+
+                    moveToProductSelection(++currentStep);
+                } else {
+                    document.querySelector('.error-roast-selection').style.display = 'block';
+                }
+            } else if (currentStep === 3) {
+                if (nodeList.length) {
+                    cartSelection.gridType.name = document.querySelector('.row[class*="row-"].active .card-inn.selected .card-title').innerHTML;
+                    cartSelection.gridType.desc = document.querySelector('.row[class*="row-"].active .card-inn.selected .card-desc').innerHTML;
+                    moveToProductSelection(++currentStep);
+                } else {
+                    document.querySelector('.error-grind-selection').style.display = 'block';
+                }
+            } else if (currentStep === 4) {
+                if (nodeList.length) {
+                    cartSelection.orderFrequency = document.querySelector('.row[class*="row-"].active .card-inn.selected .card-title').innerHTML;
+                    moveToProductSelection(++currentStep);
+                } else {
+                    document.querySelector('.error-frequency-selection').style.display = 'block';
+                }
+            } else if (currentStep === 5) {
+                if (nodeList.length) {
+                    cartSelection.addon = document.querySelector('.row[class*="row-"].active .card-inn.selected .card-title').innerHTML;
+                    moveToProductSelection(++currentStep);
+                } else {
+                    document.querySelector('.error-addon-selection').style.display = 'block';
+                }
+            }
+            console.log(cartSelection)
+        }
+        function reduceRoastCount(_this) {
+            if (_this.nextElementSibling.innerHTML > 0) {
+                --_this.nextElementSibling.innerHTML;
+                document.getElementById("roastCountSelected").innerHTML = --document.getElementById("roastCountSelected").innerHTML;
+                if (_this.nextElementSibling.innerHTML < 1) {
+                    let idx = cartSelection.roastSelect.indexOf(_this.closest('.card-roast').querySelector('.card-title').innerHTML);
+                    cartSelection.roastSelect.splice(idx, 1);
+                }
+            }
+        }
+        function increaseRoastCount(_this) {
+            if (parseInt(document.getElementById("roastCountSelected").innerHTML) < parseInt(document.getElementById("roastTotalAllowed").innerHTML)) {
+                ++_this.previousElementSibling.innerHTML;
+                document.getElementById("roastCountSelected").innerHTML = ++document.getElementById("roastCountSelected").innerHTML;
+                if (cartSelection.roastSelect.indexOf(_this.closest('.card-roast').querySelector('.card-title').innerHTML) < 0) {
+                    cartSelection.roastSelect.push(_this.closest('.card-roast').querySelector('.card-title').innerHTML);
+                }
+            } else {
+                document.querySelector('.error-roast-selection').style.display = 'none';
+            }
+        }
+        function highlightStep(step) {
+            Array.from(document.querySelectorAll('.list-nav li')).forEach(function (el) {
+                el.classList.remove('active');
+            });
+            document.querySelector('.list-nav li:nth-child(' + parseInt(step) + ')').classList.add("active");
+        }
+        function fillSummaryDetail() {
+            document.getElementById("selectedProductTitle").innerHTML = cartSelection.productSelected.name;
+            document.getElementById("selectedProductDesc").innerHTML = cartSelection.productSelected.desc;
+            document.getElementById("selectedProductPic").setAttribute('src', cartSelection.productSelected.imgUrl);
+            document.getElementById("selectedBagsQuan").innerHTML = cartSelection.productBagDetail.bag;
+            document.getElementById("selectedRoasts").innerHTML = '';
+            cartSelection.roastSelect.forEach(function (item) {
+                document.getElementById("selectedRoasts").innerHTML = document.getElementById("selectedRoasts").innerHTML + '<li>' + item + '</li>';
+            });
+            document.getElementById("selectedGrindTitle").innerHTML = cartSelection.gridType.name;
+            document.getElementById("selectedGrindDesc").innerHTML = cartSelection.gridType.desc;
+            document.getElementById("selectedOrderFrequency").innerHTML = cartSelection.orderFrequency;
+            document.getElementById("selectedProductAddon").innerHTML = cartSelection.addon;
+            if (cartSelection.productBagDetail.priceDiscount === cartSelection.productBagDetail.priceActual) {
+                document.getElementById("selectedProductActPrice").innerHTML = '';
+            } else {
+                document.getElementById("selectedProductActPrice").innerHTML = '$' + cartSelection.productBagDetail.priceActual
+            }
+            document.getElementById("selectedProductDiscPrice").innerHTML = '$' + cartSelection.productBagDetail.priceDiscount;
+            document.getElementById("shippingFee").innerHTML = '$' + cartSelection.productBagDetail.shippingFee;
+            if (cartSelection.productBagDetail.shippingFee === 0) {
+                document.getElementById("shippingFee").innerHTML = 'FREE';
+            }
+            document.getElementById("subTotalAmount").innerHTML = '$' + (parseFloat(cartSelection.productBagDetail.priceDiscount) + parseFloat(cartSelection.productBagDetail.shippingFee));
+        }
+        function moveToProductSelection(step) {
+            currentStep = step;
+            hideAllProdDetailSteps();
+            document.querySelector(".product-selection-next").style.visibility = 'visible';
+            if (step === 0) {
+                document.getElementById("sectionProduct").style.display = 'block';
+                document.getElementById("sectionProductDetailSteps").style.display = 'none';
+            } else if (step === 1) {
+                initializeBags();
+                document.querySelector(".row-bags-selection").classList.add("active");
+            } else if (step === 2) {
+                document.querySelector(".row-roast-selection").classList.add("active");
+            } else if (step === 3) {
+                document.querySelector(".row-grid-type").classList.add("active");
+            } else if (step === 4) {
+                document.querySelector(".row-frequency-selection").classList.add("active");
+            } else if (step === 5) {
+                document.querySelector(".row-addon-section").classList.add("active");
+            } else if (step === 6) {
+                document.querySelector(".row-summary-section").classList.add("active");
+                document.querySelector(".product-selection-next").style.visibility = 'hidden';
+                fillSummaryDetail();
+            }
+            highlightStep(step);
+        }
+    </script>
+</body>
+
 </html>
